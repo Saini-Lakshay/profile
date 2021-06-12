@@ -1,0 +1,174 @@
+#main-container {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(0, 0, 0, 0.98);
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#main-container::-webkit-scrollbar {
+  display: none;
+}
+
+#div-image {
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#header {
+  position: fixed;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  color: aliceblue;
+}
+
+#selectedHeaderOption {
+  /* background-color: aliceblue; */
+  color: aqua;
+  padding: 10px;
+  border-radius: 0px;
+  border-bottom: 3px solid aqua;
+  font-weight: 700;
+  cursor: pointer;
+  animation-name: headerSelectedOptionAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes headerSelectedOptionAnimation {
+  from {
+    opacity: 0.4;
+    border-radius: 5px;
+  }
+  to {
+    opacity: 1;
+    border-radius: 20px;
+  }
+}
+
+@keyframes headerOptionAnimation {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#headerOption {
+  cursor: pointer;
+  animation-name: headerOptionAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+#scroll-gif {
+  position: fixed;
+  bottom: 20px;
+  border-radius: 50%;
+  height: 100px;
+  width: 200px;
+}
+
+#my-profile-pic {
+  height: 60vh;
+  width: 30vw;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#portion2-container #my-profile-pic {
+  animation-name: zoomOutImage;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+#portion2-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  flex-direction: row;
+}
+
+#portion2-container:hover #my-profile-pic {
+  animation-name: zoomImage;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomImage {
+  0% {
+    transform: scale(1);
+    margin-left: 0%;
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.15);
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes zoomOutImage {
+  from {
+    transform: scale(1.15);
+    margin-left: 0%;
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    margin-left: 0%;
+    opacity: 0.4;
+  }
+}
+
+#about-me {
+  color: #f7f6f9;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+#about-me li {
+  color: #ee4f51;
+  font-size: 2vw;
+}
+
+#about-me li:hover {
+  color: springgreen;
+  font-size: 3.5vw;
+}
+
+@media only screen and (max-width: 500px) {
+  #portion2-container {
+    flex-direction: column;
+  }
+  #my-profile-pic {
+    width: 60vw;
+    height: 50vh;
+  }
+
+  #about-me {
+    font-size: 5vw;
+  }
+  #about-me li {
+    font-size: 3.5vw;
+  }
+}
