@@ -1,0 +1,159 @@
+.rhombus {
+  transform: rotate(45deg);
+  animation-name: rhombusMovement;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.rhombus:hover {
+  animation-name: rhombusHover;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rhombusHover {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes rhombusMovement {
+  /* 0% {
+    margin-top: 0px;
+  }
+  25% {
+    margin-top: 10px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  75% {
+    margin-top: -10px;
+  }
+  100% {
+    margin-top: 0px;
+  } */
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#profile-image {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 15vh;
+  position: absolute;
+  top: 30vh;
+  left: 60vw;
+}
+
+/* Hams */
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 10000;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #8739fb;
+}
+
+button {
+  outline: none;
+  border: none;
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; */
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+
+.text-placeholder {
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+  flex: 1;
+}
+
+.parent {
+  background: white;
+  width: 100px;
+  height: 100px;
+  margin-left: 80vw;
+  margin-top: -20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: relative;
+}
+
+.parent[data-isOpen="true"] {
+  width: 50vw;
+  height: 200px;
+  margin-left: 45vw;
+}
+
+.child {
+  width: 40px;
+  height: 40px;
+  /* background: red; */
+  border-radius: 50%;
+}
+
+.parent:hover {
+}

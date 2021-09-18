@@ -3,6 +3,7 @@ import "./Screens.css";
 import profile from "../assets/profile.jpeg";
 import backImage from "../assets/backImage2.jpeg";
 import scrollGif from "../assets/scrollGif.gif";
+import backgroundSvg from "../assets/backgroundSvg.svg";
 
 const visible = "block";
 const hidden = "none";
@@ -69,7 +70,7 @@ export default function MainScreen(props) {
         <div
           id="div-image"
           style={{
-            backgroundImage: `url(${backImage})`,
+            backgroundImage: `url(${backgroundSvg})`,
             height: `${height}px`,
             width: `${width}px`,
             opacity: `${(0.2 * window.innerHeight) / scrollTopVal}`,
